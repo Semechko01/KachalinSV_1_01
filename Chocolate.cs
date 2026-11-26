@@ -8,7 +8,7 @@ namespace KachalinSV_1_1
 {
     public class Chocolate : Pitanie
     {
-        public Chocolate(string _name, float _belok, float _yglevodi,float _P)
+        public Chocolate(string _name, float _belok, float _yglevodi,float _P)//Создание конструктор класса
         {
             Name = _name;
             Belok = _belok;
