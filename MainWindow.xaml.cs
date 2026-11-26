@@ -38,7 +38,7 @@ namespace KachalinSV_1_1
                 {
                     float d1 = Convert.ToSingle(textbox2.Text);
                     float d2 = Convert.ToSingle(textbox3.Text);
-                    if(d1 < 0 || d2 < 0)
+                    if(d1 < 0 || d2 < 0)//Проверка что количество углеводов и белка не равно нулю
                     {
                         MessageBox.Show("Минусовое число");
                         return;
@@ -46,11 +46,16 @@ namespace KachalinSV_1_1
 
                     if(Convert.ToBoolean(checkbox.IsChecked))
                     {
-                        if(textbox4.Text.Length == 0)
+                        if(textbox4.Text.Length == 0)//Проверка на пустоту строк
                         {
                             MessageBox.Show("Пустые строки");
                         }
                         float d3 = Convert.ToSingle(textbox4.Text);
+                        if(d3 < 0)//Проверка что количество жиров не равно нулю
+                        {
+                            MessageBox.Show("Минусовое число");
+                            return;
+                        }
                         Chocolate obj = new Chocolate(textbox1.Text,d1,d2,d3);
                         list_Obj2.Add(obj);
                         list2.Add(obj.Info());
