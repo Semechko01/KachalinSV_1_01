@@ -1,0 +1,40 @@
+﻿<Window x:Class="KachalinSV_1_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KachalinSV_1_1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="400"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50">
+                <TextBlock FontSize="14" VerticalAlignment="Center">Название:</TextBlock>
+                <TextBox Height="30" Width="200" Background="AliceBlue" Name="textbox1"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50">
+                <TextBlock FontSize="14" VerticalAlignment="Center">Количества белка:</TextBlock>
+                <TextBox Height="30" Width="200" Background="AliceBlue" Name="textbox2"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50">
+                <TextBlock FontSize="14" VerticalAlignment="Center">Количества углеводов:</TextBlock>
+                <TextBox Height="30" Width="200" Background="AliceBlue" Name="textbox3"></TextBox>
+            </StackPanel>
+            <CheckBox Height="30" VerticalAlignment="Center" Click="CheckBox_Click" Name="checkbox">Использовать класс потомок</CheckBox>
+            <StackPanel Orientation="Horizontal" Height="50">
+                <TextBlock FontSize="14" VerticalAlignment="Center">Количества жиров:</TextBlock>
+                <TextBox Height="30" Width="200" Background="AliceBlue" Name="textbox4" IsEnabled="False"></TextBox>
+            </StackPanel>
+            <Button Height="30" Width="300" Margin="0,10" FontWeight="Bold" Click="Button_Click">Создать элемент</Button>
+            
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock HorizontalAlignment="Center" FontSize="20" FontWeight="Bold">Список данных</TextBlock>
+            <ListView Background="AntiqueWhite" Height="380" Margin="0,10" Name="list1"/>
+        </StackPanel>
+    </Grid>
+</Window>
