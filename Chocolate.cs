@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KachalinSV_1_1
 {
-    public class Chocolate : Pitanie
+    public class Chocolate : Pitanie//Создание класса наследуемого от класса Pitanie
     {
         public Chocolate(string _name, float _belok, float _yglevodi,float _P)//Создание конструктор класса
         {
@@ -26,7 +26,7 @@ namespace KachalinSV_1_1
         }
 
 
-        public void Qp()
+        public void Qp()//Формулы для нового вида качества
         {
             q = Q_calculator();
             if (P >= 0 && P <= 20)
@@ -34,7 +34,7 @@ namespace KachalinSV_1_1
             else if (P > 20)
                 q = q * 1.5f + P * 10;
         }
-        public string Info()
+        public string Info()//Функция для вывода информации для обьекта
         {
             return $"Name: {Name}\nБелок: {Belok}г\nУглеводы: {Yglevodi}г\nQ: {q}\nЖиры: {p}";
         }
